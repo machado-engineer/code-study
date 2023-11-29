@@ -6,28 +6,24 @@
     <title>Formulário de Cadastro</title>
 </head>
 <body>
-    <nav>
-        <h1>Arqueria Lobo Branco</h1>
-        <h2>Portal do maior clã de arquearia do Litoral Paranaense</h2>
-    </nav>
-    <nav>
-        <ul>
-          <li><a href="index.html">Ínicio</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-      </nav>
     <form name="cadastro" onsubmit="alert('Formulário Enviado');" autocomplete="on" target="_blank" method="POST" action="#">
-        <strong>Formulário de Filiação do Clã</strong> <br/>
-        <label>Nome:</label><input type="text" name="name" /> <br/>
-        <label>Idade:</label> <input type="number" name="age" min="0" max="99"/> <br/>
-        <label>Categoria (AM-PRO): </label> <input type="radio" name="categoria" value="amador"/><input type="radio" name="categoria" value="profissional"/> <br/>
-        <label>Data de Nascimento: </label><input type="date" name="date"/> <br/>
-        <label>Endereço: </label> <input type="text" name="endereco"/> <br/>
-        <label>Foto de Perfil:</label> <input type="file" name="foto"/> <br/>
-        <label>Senha:</label> <input type="password" name="password"/> <br/>
-        <label>Concordo com termos de uso:</label> <input type="checkbox" name="termos"/> <br/>
-        <button type="submit">Enviar</button>
+        <fieldset>
+            <strong>Formulário de Filiação do Clã</strong> <br/>
+            <label>Nome:</label><input type="text" name="name" /> <br/>
+            <label>Idade:</label> <input type="number" name="age" min="0" max="99"/> <br/>
+            <label>Foto de Perfil:</label> <input type="file" name="foto"/> <br/>
+            <label>Categoria: </label> 
+                <select name="categoria">
+                    <option value="amador">Amador</option>
+                    <option value="profissional">Profissional</option>
+                </select><br/>
+            <label>Data de Nascimento: </label><input type="date" name="date"/> <br/>
+            <label>Endereço: </label> <input type="text" name="endereco"/> <br/>
+            <label>Bio: </label><textarea>Conte um pouco sobre você...</textarea> <br/>
+            <label>Senha:</label> <input type="password" name="password"/> <br/>
+            <label>Concordo com termos de uso:</label> <input type="checkbox" name="termos"/> <br/>
+            <button type="submit">Enviar</button>
+        </fieldset>
     </form>
 </body>
 </html>
